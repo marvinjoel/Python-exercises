@@ -8,8 +8,6 @@ def Regla_Juego():
     print('============================\n')
     print("El juego consiste en lo siguiente:\nLa máquina tratarra de ganarte\nTienes que escoger la opción:\nPiedra, Papel, o Tijera.\nSuerte! :)\n\n")
 
-
-
 def Jugar():
     Regla_Juego() #Llamamos a la funcion REGLA JUEGO
 
@@ -17,8 +15,6 @@ def Jugar():
         user = input('Ingrese la opcion: ').lower()
         lista = ['piedra','papel','tijera']
         maquina = random.choice(lista)
-
-        #mesaje = "" if (user =='pi')else ""
 
         if user in lista: #Se compara si el dato ingresado por el usuario está en la lista que asignamos
             if user == maquina: #Comparacion si la opcion elegida por el usuario es igual a la opcion elegida por la máquina
@@ -31,7 +27,6 @@ def Jugar():
         else:
             print('ERROR: Solo tienes que ingresar las opciones, piedra, papel, tijera.\n')
 
-
 def Juego_ganado(jugador, oponente):#Recibe 2 parametros
     # Retornar true (verdadero) si gana el jugador.
     # Piedra gana a tijera (pi > ti)
@@ -43,7 +38,7 @@ def Juego_ganado(jugador, oponente):#Recibe 2 parametros
         return False
 
 
-a = Jugar()
-print(a)
+print(Jugar())
+
 
     
