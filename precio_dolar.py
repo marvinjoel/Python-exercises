@@ -27,6 +27,7 @@ class Dolar:
         sitio = self.Request()['sitio']
         enlace = self.Request()['enlace']
         precio_dolar = float(self.Request()['Cotizacion'][0]['Venta'])
+        precio_dolar_c = float(self.Request()['Cotizacion'][0]['Compra'])
 
         print('################')
         print('Cambio de Dolar')
@@ -34,6 +35,10 @@ class Dolar:
 
         print(f'\nDe: {sitio}')
         print(f'Url: {enlace}')
+
+        print('\nTipo de cambio Dolar:')
+        print(f'Venta: S/{precio_dolar:.2f}')
+        print(f'Compra: S/{precio_dolar_c:.2f}')
 
         while True:
             print("""
@@ -57,6 +62,6 @@ class Dolar:
                 break
 
 
-
-dolar = Dolar()
-dolar.TraerDatos()
+if __name__ == '__main__':
+    dolar = Dolar()
+    dolar.TraerDatos()
