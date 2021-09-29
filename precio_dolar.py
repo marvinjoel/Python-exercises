@@ -50,11 +50,11 @@ class Dolar:
             """)
             usuario = self.Validacion('que tipo de cambio desea realizar?: ')
             if usuario == 1:
-                dolares = float(input('\nIngrese su valor en Dolares: '))
+                dolares = float(self.Validacion('\nIngrese su valor en Dolares: '))
                 r = precio_dolar * dolares
                 print(f'El cambio en Soles es: S/{r:.2f}\n')
             elif usuario == 2:
-                dolares = float(input('\nIngrese su valor en Soles: '))
+                dolares = float(self.Validacion('\nIngrese su valor en Soles: '))
                 r = dolares / precio_dolar
                 print(f'El Cambio en Dolares es: ${r:.2f}\n')
             elif usuario == 3:
